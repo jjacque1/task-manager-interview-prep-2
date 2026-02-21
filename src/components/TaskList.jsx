@@ -1,6 +1,6 @@
 import TaskItem from "./TaskItem";
 
-export default function TaskList({ onDeleteTask, taskProp }) {
+export default function TaskList({ onDeleteTask, taskProp, onUpdateTaskStatus }) {
   return (
     <ul>
       {taskProp.map((task) => (
@@ -8,6 +8,7 @@ export default function TaskList({ onDeleteTask, taskProp }) {
           key={task.id}
           onDeleteTask={onDeleteTask}
           taskProp={task}
+          onUpdateTaskStatus={onUpdateTaskStatus}
         />
       ))}
     </ul>
